@@ -1,0 +1,24 @@
+.help-box {
+  padding: 1.25rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.help-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.help-box h2 {
+  margin: 0.9rem 0 0.4rem;
+  font-size: 1.05rem;
+  color: var(--accent-text);
+}
+
+.help-box p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

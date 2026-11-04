@@ -1,0 +1,26 @@
+#learning-path { margin-top: 1.75rem; text-align: left; animation: fade-up 0.35s ease both; }
+.path-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.path-head h2 { margin: 0; font-size: 1.1rem; }
+.path-count { color: var(--muted); font-size: 0.85rem; }
+.progress { height: 0.6rem; margin: 0.75rem 0 1.25rem; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.progress span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-text)); border-radius: 999px; transition: width 0.4s ease; }
+.lessons { display: grid; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
+.lesson { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; transition: border-color 0.2s; }
+.lesson.is-open { border-color: var(--accent); }
+.lesson-head { display: flex; align-items: center; gap: 0.75rem; width: 100%; padding: 0.85rem 1rem; background: none; border: 0; color: inherit; text-align: left; }
+.lesson-head:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; border-radius: 12px; }
+.lesson-mark { display: inline-grid; place-items: center; flex: none; width: 1.9rem; height: 1.9rem; border: 2px solid var(--border); border-radius: 50%; font-size: 0.85rem; font-weight: 700; }
+.is-done .lesson-mark { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.lesson-title { flex: 1; font-weight: 600; }
+.lesson-time { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--muted); font-size: 0.85rem; }
+.lesson-head > .icon:last-child { color: var(--muted); transition: transform 0.2s; }
+.is-open .lesson-head > .icon:last-child { transform: rotate(180deg); }
+.lesson-body { padding: 0 1rem 1rem 3.65rem; }
+.lesson-body p { margin: 0 0 0.9rem; color: var(--muted); }
+.code { position: relative; margin-bottom: 1rem; }
+.code pre { margin: 0; padding: 1rem; overflow-x: auto; background: #0d1117; color: #e6edf3; border: 1px solid var(--border); border-radius: 10px; font-size: 0.82rem; line-height: 1.55; }
+.copy { position: absolute; top: 0.5rem; right: 0.5rem; padding: 0.3rem 0.7rem; font-size: 0.8rem; }
+@media (max-width: 40rem) {
+  .lesson-body { padding-left: 1rem; }
+  .lesson-time { display: none; }
+}
