@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Icon from './components/Icon';
 import MainContent from './components/MainContent';
-import jenkinsLogo from './assets/jenkins-logo.png';
+import jenkinsLogo from './assets/images/jenkins-logo.png';
 
 function App() {
   const [theme, setTheme] = useState(() => {
