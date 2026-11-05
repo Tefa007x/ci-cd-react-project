@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Icon from './components/Icon';
 import MainContent from './components/MainContent';
+import jenkinsLogo from './assets/jenkins-logo.png';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -34,7 +35,7 @@ function App() {
           <Icon name={isDark ? 'sun' : 'moon'} />
         </button>
         <div id="logo-img">
-          <Icon name="workflow" />
+          <img src={jenkinsLogo} alt="Jenkins Logo" />
         </div>
         <h1>
           Learn & Master <span className="accent">Jenkins</span>
