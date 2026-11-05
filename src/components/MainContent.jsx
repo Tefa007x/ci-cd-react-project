@@ -5,7 +5,7 @@ import Icon from './Icon';
 import LearningPath from './LearningPath';
 import Pipeline from './Pipeline';
 
-const REPO_URL = 'https://github.com/abdelrahmanonline4/action-react-demo';
+const REPO_URL = 'https://github.com/Tefa007x/ci-cd-react-project.git';
 
 function MainContent() {
   const [helpVisible, setHelpVisible] = useState(false);
