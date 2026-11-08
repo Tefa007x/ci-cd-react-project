@@ -1,0 +1,25 @@
+---
+- name: "Build the container with ansible"
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: stop current running container
+      command: docker stop react-project-1
+      ignore_errors: yes
+
+    - name: remove stopped container
+      command: docker rm react-project-1
+      ignore_errors: yes
+
+    - name: remove comingsoon-image
+      command: docker rmi tefa007/react-app-img:latest
+      ignore_errors: yes
+
+    - name: build docker image using the Dockerfile
+      command: docker build -t tefa007/react-app-img:latest .
+
+    - name: Push Image to dockerhub
+      command: docker push tefa007/react-app-img:latest
+
+    - name: run container
+      command: docker run -d --name react-project-1 -p 5000:80 tefa007/react-app-img:latest
