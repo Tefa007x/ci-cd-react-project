@@ -29,7 +29,7 @@ pipeline {
         stage('Run Ansible Playbook') {
             steps {
                 sh 'ansible --version'
-                sh 'ansible-playbook -i "$ANSIBLE_PLAYBOOK"'
+                sh 'ansible-playbook "$ANSIBLE_PLAYBOOK"'
             }
         }
     }
