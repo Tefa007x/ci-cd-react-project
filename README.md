@@ -64,7 +64,9 @@ Every push to `main` can trigger the same flow: checkout, Docker Hub login, then
 ├── public/                     # Static assets (favicon)
 ├── index.html
 ├── vite.config.js
-└── package.json
+├── package.json
+├── package-lock.json
+└── .gitignore
 ```
 
 ## Prerequisites
